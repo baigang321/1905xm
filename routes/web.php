@@ -11,8 +11,12 @@
 |
 */
 
-Route::post('/', function () {
-    return view('index.index');
+Route::get('/', function () {
+    return view('welcome');
 });
-// Route::get('/index/index/','Index\IndexController@index');
+    Route::get('login/register','Login\LoginController@register');
+    Route::post('login/registerto','Login\LoginController@registerto');
+    Route::get('login/login','Login\LoginController@Login');
+    Route::post('login/loginto','Login\LoginController@Loginto');
+    Route::any('index/index','Login\IndexController@index');
 
