@@ -4,7 +4,8 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User.php extends Model
+class User extends Model
 {
-    //
+    protected $table='user';
+    protected $pk='id';
 }
