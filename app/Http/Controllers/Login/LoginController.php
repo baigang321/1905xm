@@ -14,6 +14,7 @@ class loginController extends Controller
     public function registerto(){
     	// echo 123;exit;
         $data = $_POST;
+        //dd($data);
        // var_dump($data);exit;
         unset($data['_token']);
         if ($data['password'] != $data['password2']){
@@ -43,7 +44,7 @@ class loginController extends Controller
                 if ($res['password']==md5($data['password'])){
                     return view("/Index/index",['name'=>$name]);
                 }else{
-                    return redirect("/login/login");
+                    return redirect("/");
                 }
             }else{
                 return redirect("/login/login");
