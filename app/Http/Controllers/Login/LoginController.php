@@ -12,7 +12,9 @@ class loginController extends Controller
         return view('login/register');
     }
     public function registerto(){
+    	// echo 123;exit;
         $data = $_POST;
+       // var_dump($data);exit;
         unset($data['_token']);
         if ($data['password'] != $data['password2']){
             dd('密码不一致');
