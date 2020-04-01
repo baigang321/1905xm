@@ -20,3 +20,5 @@
     Route::post('login/loginto','Login\LoginController@Loginto');
     Route::any('/','Login\IndexController@index');
 
+Route::get('author/index',"Index\AuthorController@index")->middleware('checkuser');
+Route::get('login',"Index\UserController@login");

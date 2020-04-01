@@ -1,3 +1,6 @@
+.nav span{
+    padding:0 12px;
+}
 @charset "utf-8";
 @import url(../lib/layui/css/layui.css);
 *{
