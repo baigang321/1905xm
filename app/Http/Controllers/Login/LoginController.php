@@ -42,7 +42,7 @@ class loginController extends Controller
         $res=User::where('name',$data['name'])->first();
             if ($res){
                 if ($res['password']==md5($data['password'])){
-                    return view("/",['name'=>$name]);
+                    return redirect("/",['name'=>$name]);
                 }else{
                     return redirect("/");
                 }
